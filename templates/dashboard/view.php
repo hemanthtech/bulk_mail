@@ -32,15 +32,15 @@
 
               ?>
 
-              <a href="Email/View" class="btn btn-danger btn-lg" role="button">
+              <a href="<?php echo HOST . PATH; ?>Email/View" class="btn btn-danger btn-lg" role="button">
                 <h1><?php echo $dashboard->sentMail(); ?></h1>
                 <span class="glyphicon glyphicon-envelope stat"></span> <br/>FAILED EMAILS
               </a>
-              <a href="Subscriber/View" class="btn btn-info btn-lg" role="button">
+              <a href="<?php echo HOST . PATH; ?>Subscriber/View" class="btn btn-info btn-lg" role="button">
                 <h1><?php echo $dashboard->getSubscribers(); ?></h1>
                 <span class="glyphicon glyphicon-user stat"></span> <br/>SUBSCRIBERS
               </a>
-              <a href="Lists/View" class="btn btn-warning btn-lg" role="button">
+              <a href="<?php echo HOST . PATH; ?>Lists/View" class="btn btn-warning btn-lg" role="button">
                 <h1><?php echo $dashboard->getMailingLists(); ?></h1>
                 <span class="glyphicon glyphicon-list stat"></span> <br/>MAILING LISTS
               </a>

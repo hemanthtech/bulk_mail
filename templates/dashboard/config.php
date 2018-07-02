@@ -112,7 +112,7 @@ $(function() {
     $inputs.prop("disabled", true);
 
     request = $.ajax({
-      url: "config/config.init.php",
+      url: "<?php echo HOST . PATH; ?>config/config.init.php",
       type: "post",
       data: serializedData
     });
@@ -122,7 +122,7 @@ $(function() {
 
       // jQuery URL redirection
       $(document).ready( function() {
-        url = "./User/Create";
+        url = "<?php echo HOST . PATH; ?>templates/User/Create";
         $( location ).attr("href", url);
       });
 

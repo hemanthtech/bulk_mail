@@ -94,7 +94,7 @@ function getEmailList() {
 
   $.ajax({
     type: "GET",
-    url: "<?php echo HOST . '/' . PATH; ?>/templates/email/email_list.php",
+    url: "<?php echo HOST . PATH; ?>templates/email/email_list.php",
     dataType: "html",
     success: function(response){
         $("#saved_emails").html(response);
@@ -135,7 +135,7 @@ $(function() {
     $inputs.prop("disabled", true);
 
     request = $.ajax({
-      url: "<?php echo HOST . '/' . PATH; ?>/src/email/create.php",
+      url: "<?php echo HOST . PATH; ?>src/email/create.php",
       type: "post",
       data: serializedData
     });
@@ -150,6 +150,7 @@ $(function() {
       $("#mail_list").children().removeAttr("selected");
       $("#subject").val('');
       $("#body").val('');
+      tinyMCE.activeEditor.setContent('');
 
       // Reload the mailing lists with the new data
       getEmailList();
@@ -193,7 +194,7 @@ $(function() {
       $inputs.prop("disabled", true);
 
       request = $.ajax({
-        url: "<?php echo HOST . '/' . PATH; ?>/templates/email/edit.php",
+        url: "<?php echo HOST . PATH; ?>templates/email/edit.php",
         type: "POST",
         data: serializedData
       });
@@ -245,7 +246,7 @@ $(function() {
       $inputs.prop("disabled", true);
 
       request = $.ajax({
-        url: "<?php echo HOST . '/' . PATH; ?>/src/email/delete.php",
+        url: "<?php echo HOST . PATH; ?>src/email/delete.php",
         type: "POST",
         data: serializedData
       });
