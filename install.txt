@@ -7,3 +7,6 @@
     c. System settings.
 5. Create a new user account.
 6. Login to the system.
+
+Webhooks need to be setup on your Mailgun account for event tracking.
+E.g: http://your_domain.com/root_directory/src/email/webhook.php
