@@ -11,6 +11,8 @@
 
     function __construct(){
 
+      $this->redirect();
+
       $this->host = DB_HOST;
       $this->user = DB_USER;
       $this->password = DB_PWD;
@@ -119,6 +121,15 @@
 
       // Return the message
       return $return;
+    }
+
+    // Redirect user to login
+    protected function redirect(){
+
+      if(!isset($_SESSION['user_id'])){
+
+        header('Location: ' . HOST . PATH);
+      }
     }
 
   }
