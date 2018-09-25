@@ -14,7 +14,7 @@ $data = "<?php
 session_start();
 
 define('DB_HOST', '". $_POST['db-host'] ."');
-define('DB_USER', '". $_POST['db-username'] ."');
+define('DB_USER', '". $_POST['db-user'] ."');
 define('DB_PWD', '". $_POST['db-password'] ."');
 define('DB_DATABASE', '". $_POST['db-name'] ."');
 
